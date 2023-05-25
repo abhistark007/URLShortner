@@ -7,7 +7,7 @@ function ShortUrlDisplayCard({url}) {
 
     const handleCopy=()=>{
         navigator.clipboard.writeText(url);
-        toast("Link Copied !")
+        toast.success("Link Copied !")
     }
 
   if(!url){
