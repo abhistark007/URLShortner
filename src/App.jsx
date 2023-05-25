@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css'
 import { getShortenURL } from './utils/api'
-import { useEffect } from 'react';
 import { fetchShortURLResults } from './store/shortURLSlice';
 import SearchBar from './components/SearchBar';
 import ShortUrlDisplayCard from './components/ShortUrlDisplayCard';
+
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
             
             <ShortUrlDisplayCard url={value.short_link}/>
         </div>
+        
     </div>
   )
 }
