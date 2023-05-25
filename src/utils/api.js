@@ -12,7 +12,7 @@ export const getShortenURL= async(url)=>{
         // console.log("SSSS",data);
         return data;
     }catch(e){
-        console.log("ERRRRRRRRR",e);
-        return e;
+        // console.log(e.response.data.ok);
+        return e.response.data.ok;
     }
 }
