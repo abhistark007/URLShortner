@@ -6,8 +6,8 @@ export const shortURLSlice = createSlice({
     value: {},
   },
   reducers: {
-    fetchShortURLResults: (state,actions) => {
-      state.value=actions.payload;
+    fetchShortURLResults: (state,action) => {
+      state.value=action.payload;
     },
     
   },
