@@ -8,7 +8,7 @@ import ShortUrlDisplayCard from './components/ShortUrlDisplayCard';
 
 
 function App() {
-  const {value}=useSelector((state)=>state.shortURL);
+  const {value}=useSelector((state)=>state.shortURL); 
   const dispatch=useDispatch();
   
 
@@ -24,9 +24,10 @@ function App() {
 
   return (
     <div className='flex flex-col bg-black min-h-screen items-center'>
-        <div className='flex flex-col w-[60%]'>
+       <p className='text-white text-5xl py-5'><span className='tracking-widest'>URL</span> Shortner v 1.0</p>
+        <div className='flex flex-col w-[60%] py-10'>
             <SearchBar getShortUrl={getShortUrl}/>
-            {/* <p className='text-white'>{value.short_link}</p> */}
+            
             <ShortUrlDisplayCard url={value.short_link}/>
         </div>
     </div>
