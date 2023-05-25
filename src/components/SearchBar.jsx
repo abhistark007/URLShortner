@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { toast } from 'react-toastify';
 
 function SearchBar({getShortUrl}) {
     const [url,setUrl]=useState("");
@@ -6,6 +7,8 @@ function SearchBar({getShortUrl}) {
     const handleClick=()=>{
         if(url.length>0){
             getShortUrl(url);
+        }else{
+            toast.warn("The Input field cannot be empty !")
         }
     }
   return (
